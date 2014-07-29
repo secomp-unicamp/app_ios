@@ -29,7 +29,9 @@
 }
 
 - (void)setup{
-	static NSString *feedURLString = @"http://secomp.com.br/feed/";
+	
+	static NSString *feedURLString = @"http://feeds.feedburner.com/vmwstudios";
+//	static NSString *feedURLString = @"http://secomp.com.br/feed/";
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	NSURLRequest *newsFeedURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:feedURLString]];
 	[NSURLConnection sendAsynchronousRequest:newsFeedURLRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {

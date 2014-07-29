@@ -1,6 +1,6 @@
 //
 //  ParseOperation.m
-//  RSSFun
+//  AppSecomp
 //
 //  Created by Guilherme Andrade on 7/28/14.
 //  Copyright (c) 2014 Unicamp. All rights reserved.
@@ -55,6 +55,8 @@
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
+		
+	
 	if([elementName isEqualToString:@"link"]){
 		self.currentNewsObject.link = self.currentParsedCharacterData;
 	}
@@ -63,11 +65,11 @@
 	}
 	else if([elementName isEqualToString:@"description"]){
 		self.currentNewsObject.description = self.currentParsedCharacterData;
-		
+	}
+	else if([elementName isEqualToString:@"item"]){
 		if(self.currentNewsObject){
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"newParsedObjectAvailable" object:self.currentNewsObject];
 		}
-		
 	}
 	
 	_accumulatingParsedCharacterData = NO;
