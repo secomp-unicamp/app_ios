@@ -10,6 +10,10 @@
 		3006C2EA1986E3BD00770AD6 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C2E91986E3BD00770AD6 /* HomeVC.m */; };
 		3006C3C719874E6100770AD6 /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C3C619874E6100770AD6 /* ParseOperation.m */; };
 		3006C3CA19874E6A00770AD6 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C3C919874E6A00770AD6 /* News.m */; };
+		3006C40E1988089A00770AD6 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C40D1988089A00770AD6 /* ScheduleVC.m */; };
+		3006C41419880AFA00770AD6 /* ActivityDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C41319880AFA00770AD6 /* ActivityDetailsVC.m */; };
+		3006C41719880B3C00770AD6 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C41619880B3C00770AD6 /* Activity.m */; };
+		3006C41919881FF300770AD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3006C41819881FF300770AD6 /* MapKit.framework */; };
 		30530F4F1986C68F00D12C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30530F4E1986C68F00D12C8D /* Foundation.framework */; };
 		30530F511986C68F00D12C8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30530F501986C68F00D12C8D /* CoreGraphics.framework */; };
 		30530F531986C68F00D12C8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30530F521986C68F00D12C8D /* UIKit.framework */; };
@@ -42,6 +46,13 @@
 		3006C3C619874E6100770AD6 /* ParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseOperation.m; sourceTree = "<group>"; };
 		3006C3C819874E6A00770AD6 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		3006C3C919874E6A00770AD6 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		3006C40C1988089A00770AD6 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleVC.h; sourceTree = "<group>"; };
+		3006C40D1988089A00770AD6 /* ScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleVC.m; sourceTree = "<group>"; };
+		3006C41219880AFA00770AD6 /* ActivityDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailsVC.h; sourceTree = "<group>"; };
+		3006C41319880AFA00770AD6 /* ActivityDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailsVC.m; sourceTree = "<group>"; };
+		3006C41519880B3C00770AD6 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		3006C41619880B3C00770AD6 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		3006C41819881FF300770AD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30530F4B1986C68F00D12C8D /* AppSecomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSecomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30530F4E1986C68F00D12C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30530F501986C68F00D12C8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3006C41919881FF300770AD6 /* MapKit.framework in Frameworks */,
 				30530F511986C68F00D12C8D /* CoreGraphics.framework in Frameworks */,
 				30530F531986C68F00D12C8D /* UIKit.framework in Frameworks */,
 				30530F4F1986C68F00D12C8D /* Foundation.framework in Frameworks */,
@@ -92,6 +104,8 @@
 				3006C3C919874E6A00770AD6 /* News.m */,
 				3006C3C519874E6100770AD6 /* ParseOperation.h */,
 				3006C3C619874E6100770AD6 /* ParseOperation.m */,
+				3006C41519880B3C00770AD6 /* Activity.h */,
+				3006C41619880B3C00770AD6 /* Activity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -110,6 +124,10 @@
 			children = (
 				3006C2E81986E3BD00770AD6 /* HomeVC.h */,
 				3006C2E91986E3BD00770AD6 /* HomeVC.m */,
+				3006C40C1988089A00770AD6 /* ScheduleVC.h */,
+				3006C40D1988089A00770AD6 /* ScheduleVC.m */,
+				3006C41219880AFA00770AD6 /* ActivityDetailsVC.h */,
+				3006C41319880AFA00770AD6 /* ActivityDetailsVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -136,6 +154,7 @@
 		30530F4D1986C68F00D12C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3006C41819881FF300770AD6 /* MapKit.framework */,
 				30530F4E1986C68F00D12C8D /* Foundation.framework */,
 				30530F501986C68F00D12C8D /* CoreGraphics.framework */,
 				30530F521986C68F00D12C8D /* UIKit.framework */,
@@ -288,8 +307,11 @@
 			files = (
 				3006C3CA19874E6A00770AD6 /* News.m in Sources */,
 				3006C2EA1986E3BD00770AD6 /* HomeVC.m in Sources */,
+				3006C41719880B3C00770AD6 /* Activity.m in Sources */,
 				30530F5F1986C68F00D12C8D /* AppDelegate.m in Sources */,
+				3006C40E1988089A00770AD6 /* ScheduleVC.m in Sources */,
 				30530F5B1986C68F00D12C8D /* main.m in Sources */,
+				3006C41419880AFA00770AD6 /* ActivityDetailsVC.m in Sources */,
 				3006C3C719874E6100770AD6 /* ParseOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

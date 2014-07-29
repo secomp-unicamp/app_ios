@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IlG-7n-9FX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ahc-ao-qej">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Item-->
         <scene sceneID="Ipr-cs-uzc">
             <objects>
                 <viewController id="Lzr-00-7kZ" sceneMemberID="viewController">
@@ -56,10 +56,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2zy-kg-iaI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojj-GH-kZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="-669"/>
+            <point key="canvasLocation" x="-230" y="-268"/>
         </scene>
         <!--HomeVC - News-->
         <scene sceneID="oaq-vJ-4OL">
@@ -92,7 +93,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfE-7g-1wS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475" y="-242"/>
+            <point key="canvasLocation" x="239" y="-221"/>
+        </scene>
+        <!--Activity DetailsVC-->
+        <scene sceneID="saZ-QA-hso">
+            <objects>
+                <viewController id="ahc-ao-qej" customClass="ActivityDetailsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MqB-ZE-Egz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1rz-cW-046"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wSM-lH-hHS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Palestra xx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK4-4t-9Qn">
+                                <rect key="frame" x="118" y="20" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rWX-Mj-hg6">
+                                <rect key="frame" x="40" y="220" width="240" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-qs-BOC">
+                                <rect key="frame" x="40" y="84" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-ct-I9B">
+                                <rect key="frame" x="96" y="518" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Lembre mais tarde">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setNotification:" destination="ahc-ao-qej" eventType="touchUpInside" id="Do2-w2-NLa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01/08/2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etW-W5-b8V">
+                                <rect key="frame" x="40" y="55" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kem-ea-CCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="71"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uxe-8f-MuJ">
@@ -106,34 +161,49 @@
                     </tabBar>
                     <connections>
                         <segue destination="UMD-LO-wrU" kind="relationship" relationship="viewControllers" id="dP9-QW-T4e"/>
-                        <segue destination="LjS-8f-WJx" kind="relationship" relationship="viewControllers" id="0DT-Yn-ax2"/>
+                        <segue destination="jCF-rE-4fD" kind="relationship" relationship="viewControllers" id="4fS-A5-aRG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AV-89-ULy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="85"/>
+            <point key="canvasLocation" x="-311" y="467"/>
         </scene>
-        <!--View Controller - Item 2-->
-        <scene sceneID="cEn-Zb-bhS">
+        <!--ScheduleVC - Cronograma-->
+        <scene sceneID="c3v-xk-AMi">
             <objects>
-                <viewController id="LjS-8f-WJx" sceneMemberID="viewController">
+                <viewController id="jCF-rE-4fD" customClass="ScheduleVC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kpf-B3-fbw"/>
-                        <viewControllerLayoutGuide type="bottom" id="oRV-aT-syR"/>
+                        <viewControllerLayoutGuide type="top" id="0a4-bu-HER"/>
+                        <viewControllerLayoutGuide type="bottom" id="SRX-o1-L6I"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DFf-ZY-rWS">
+                    <view key="view" contentMode="scaleToFill" id="H0S-6b-iQL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gbl-C3-2wB">
+                                <rect key="frame" x="0.0" y="20" width="320" height="500"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jCF-rE-4fD" id="JwM-uV-KMo"/>
+                                    <outlet property="delegate" destination="jCF-rE-4fD" id="6np-sJ-xGI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="gNs-u6-L8O"/>
+                    <tabBarItem key="tabBarItem" title="Cronograma" image="Alarm" id="21Z-Ib-EyF"/>
+                    <connections>
+                        <outlet property="tableView" destination="Gbl-C3-2wB" id="zjo-WD-Qsh"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cpT-eh-dDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zI-hi-VS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475" y="411"/>
+            <point key="canvasLocation" x="239" y="507"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Alarm" width="25" height="24"/>
         <image name="LogoSecomp" width="432" height="432"/>
         <image name="Reading" width="32" height="13"/>
     </resources>
