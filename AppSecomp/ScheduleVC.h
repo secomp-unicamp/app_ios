@@ -10,4 +10,6 @@
 
 @interface ScheduleVC : UIViewController
 
+@property (strong, nonatomic) NSArray *events;
+
 @end

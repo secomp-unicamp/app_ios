@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3005B628199533E200902504 /* EventsParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005B627199533E200902504 /* EventsParseOperation.m */; };
+		3005B62E19953B0900902504 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005B62D19953B0900902504 /* Event.m */; };
+		3005B631199562EF00902504 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005B630199562EF00902504 /* EventCell.m */; };
 		3006C2EA1986E3BD00770AD6 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C2E91986E3BD00770AD6 /* HomeVC.m */; };
 		3006C3C719874E6100770AD6 /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C3C619874E6100770AD6 /* ParseOperation.m */; };
 		3006C3CA19874E6A00770AD6 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C3C919874E6A00770AD6 /* News.m */; };
 		3006C40E1988089A00770AD6 /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C40D1988089A00770AD6 /* ScheduleVC.m */; };
 		3006C41419880AFA00770AD6 /* ActivityDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C41319880AFA00770AD6 /* ActivityDetailsVC.m */; };
-		3006C41719880B3C00770AD6 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C41619880B3C00770AD6 /* Activity.m */; };
 		3006C41919881FF300770AD6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3006C41819881FF300770AD6 /* MapKit.framework */; };
 		30530F4F1986C68F00D12C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30530F4E1986C68F00D12C8D /* Foundation.framework */; };
 		30530F511986C68F00D12C8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30530F501986C68F00D12C8D /* CoreGraphics.framework */; };
@@ -40,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3005B626199533E200902504 /* EventsParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsParseOperation.h; sourceTree = "<group>"; };
+		3005B627199533E200902504 /* EventsParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsParseOperation.m; sourceTree = "<group>"; };
+		3005B62C19953B0900902504 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		3005B62D19953B0900902504 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		3005B62F199562EF00902504 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		3005B630199562EF00902504 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
 		3006C2E81986E3BD00770AD6 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		3006C2E91986E3BD00770AD6 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		3006C3C519874E6100770AD6 /* ParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
@@ -50,8 +58,6 @@
 		3006C40D1988089A00770AD6 /* ScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleVC.m; sourceTree = "<group>"; };
 		3006C41219880AFA00770AD6 /* ActivityDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailsVC.h; sourceTree = "<group>"; };
 		3006C41319880AFA00770AD6 /* ActivityDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailsVC.m; sourceTree = "<group>"; };
-		3006C41519880B3C00770AD6 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
-		3006C41619880B3C00770AD6 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		3006C41819881FF300770AD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		30530F4B1986C68F00D12C8D /* AppSecomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSecomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30530F4E1986C68F00D12C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,12 +106,16 @@
 		3006C2E51986E31C00770AD6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3006C3C819874E6A00770AD6 /* News.h */,
 				3006C3C919874E6A00770AD6 /* News.m */,
+				3006C3C819874E6A00770AD6 /* News.h */,
+				3005B626199533E200902504 /* EventsParseOperation.h */,
+				3005B627199533E200902504 /* EventsParseOperation.m */,
 				3006C3C519874E6100770AD6 /* ParseOperation.h */,
 				3006C3C619874E6100770AD6 /* ParseOperation.m */,
-				3006C41519880B3C00770AD6 /* Activity.h */,
-				3006C41619880B3C00770AD6 /* Activity.m */,
+				3005B62C19953B0900902504 /* Event.h */,
+				3005B62D19953B0900902504 /* Event.m */,
+				3005B62F199562EF00902504 /* EventCell.h */,
+				3005B630199562EF00902504 /* EventCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -307,9 +317,11 @@
 			files = (
 				3006C3CA19874E6A00770AD6 /* News.m in Sources */,
 				3006C2EA1986E3BD00770AD6 /* HomeVC.m in Sources */,
-				3006C41719880B3C00770AD6 /* Activity.m in Sources */,
 				30530F5F1986C68F00D12C8D /* AppDelegate.m in Sources */,
+				3005B62E19953B0900902504 /* Event.m in Sources */,
 				3006C40E1988089A00770AD6 /* ScheduleVC.m in Sources */,
+				3005B628199533E200902504 /* EventsParseOperation.m in Sources */,
+				3005B631199562EF00902504 /* EventCell.m in Sources */,
 				30530F5B1986C68F00D12C8D /* main.m in Sources */,
 				3006C41419880AFA00770AD6 /* ActivityDetailsVC.m in Sources */,
 				3006C3C719874E6100770AD6 /* ParseOperation.m in Sources */,
