@@ -10,6 +10,7 @@
 #import "EventsParseOperation.h"
 #import "Event.h"
 #import "EventCell.h"
+#import "EventDetailsVC.h"
 
 @interface ScheduleVC () <UITableViewDataSource, UITableViewDelegate>
 
@@ -52,6 +53,23 @@
 	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:event.beginTime];
 	NSInteger dayIndex = components.day - firstDayOfEvents;
 	[self.events[dayIndex] addObject:event];
+	
+	
+	[self.events[dayIndex] sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+		
+		NSDate *beginTime1 = ((Event*)obj1).beginTime;
+		NSDate *beginTime2 = ((Event*)obj2).beginTime;
+
+		NSComparisonResult res = [beginTime1 compare:beginTime2];
+		if( res != NSOrderedSame )
+			return res;
+		else{
+			NSDate *endTime1 = ((Event*)obj1).endTime;
+			NSDate *endTime2 = ((Event*)obj2).endTime;
+			return [endTime1 compare:endTime2];
+		}
+		
+	}];
 
 	[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
@@ -106,6 +124,14 @@
 			return @"Sábado - 16";
 		default:
 			return @"";
+	}
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+	if([segue.identifier isEqualToString:@"goToEventDetails"]){
+		NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+		EventDetailsVC *nextVC = segue.destinationViewController;
+		nextVC.event = self.events[indexPath.section][indexPath.row];
 	}
 }
 

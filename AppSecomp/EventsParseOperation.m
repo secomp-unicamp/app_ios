@@ -29,6 +29,7 @@
 			event.description = obj[@"description"];
 			event.speakerName = obj[@"speaker_name"];
 			event.speakerProfession = obj[@"speaker_profession"];
+			event.speakerBiograph = obj[@"speaker_bio"];
 			event.place = obj[@"place"];
 			
 			NSString *dateString = obj[@"date"];
