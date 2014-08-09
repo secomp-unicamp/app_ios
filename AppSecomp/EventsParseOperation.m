@@ -41,6 +41,7 @@
 			
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"newEventObjectAvailable" object:event];
 			
+			event.coordinate = CLLocationCoordinate2DMake([obj[@"latitude"] doubleValue], [obj[@"longitude"] doubleValue]);
 		}
 	}
 }

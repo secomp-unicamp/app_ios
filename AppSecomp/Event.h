@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Event : NSObject
 
@@ -20,5 +21,6 @@
 @property (strong, nonatomic) NSDate *endTime;
 @property (strong, nonatomic) NSString *place;
 @property (strong, nonatomic) UIImage *photo;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 @end

@@ -11,7 +11,7 @@
 #import "Event.h"
 #import "SpeakerDetailsVC.h"
 
-@interface EventDetailsVC ()
+@interface EventDetailsVC () <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
@@ -70,7 +70,18 @@
 	
 	self.dateLabel.text = [NSString stringWithFormat:@"%@ %@:%@ - %@:%@",[self getWeekdayString:beginTimeComponents.weekday], [self getNumberWithLeftZero:beginTimeComponents.hour], [self getNumberWithLeftZero:beginTimeComponents.minute], [self getNumberWithLeftZero:endTimeComponents.hour], [self getNumberWithLeftZero:endTimeComponents.minute] ];
 	
+	
+	self.mapView.showsUserLocation = YES;
+
+	MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+	[annotation setCoordinate:self.event.coordinate];
+	[annotation setTitle:self.event.place];
+	[self.mapView addAnnotation:annotation];
+	[self.mapView setRegion:MKCoordinateRegionMake(self.event.coordinate, MKCoordinateSpanMake(0.012,0.012)) animated:NO];
+	[self.mapView selectAnnotation:annotation animated:YES];
+	
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 	if([segue.identifier isEqualToString:@"goToSpeakerDetails"]){
@@ -88,13 +99,26 @@
 }
 
 - (IBAction)remember:(id)sender {
-	//	UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-	//	localNotification.fireDate = _dateTime;
-	//	localNotification.alertBody = [NSString stringWithFormat:@"Alert Fired at %@",_dateTime];
-	//	localNotification.soundName = UILocalNotificationDefaultSoundName;
-	//	localNotification.applicationIconBadgeNumber = 1;
-	//	[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Confirmação" message:@"Deseja ser avisado 30 minutos antes do início do evento?" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"OK", nil];
+	[alert show];
 }
 
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+	if(buttonIndex){
+		UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//		localNotification.fireDate = [self.event.beginTime dateByAddingTimeInterval:-30*60];
+		
+		localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:5];
+
+		
+		localNotification.alertBody = [NSString stringWithFormat:@"%@ começa em 30 minutos em %@", self.event.name, self.event.place];
+		localNotification.soundName = UILocalNotificationDefaultSoundName;
+		localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
+		[[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+	}
+}
 
 @end
