@@ -47,7 +47,6 @@
 - (void)addNews:(NSNotification*)notification{
 	
 	[self.newsFeedsList addObject:notification.object];
-	
 	[self performSelectorOnMainThread:@selector(updateTableView) withObject:nil waitUntilDone:NO];
 	
 }

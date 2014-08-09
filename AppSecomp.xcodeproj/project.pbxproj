@@ -13,6 +13,7 @@
 		3005B63419956ED500902504 /* EventDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005B63319956ED500902504 /* EventDetailsVC.m */; };
 		3005B6371995741800902504 /* SpeakerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3005B6361995741800902504 /* SpeakerDetailsVC.m */; };
 		3005B63919957CC100902504 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3005B63819957CC100902504 /* CoreLocation.framework */; };
+		3005B63B1995E16C00902504 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3005B63A1995E16C00902504 /* MessageUI.framework */; };
 		3006C2EA1986E3BD00770AD6 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C2E91986E3BD00770AD6 /* HomeVC.m */; };
 		3006C3C719874E6100770AD6 /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C3C619874E6100770AD6 /* ParseOperation.m */; };
 		3006C3CA19874E6A00770AD6 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 3006C3C919874E6A00770AD6 /* News.m */; };
@@ -55,6 +56,7 @@
 		3005B6351995741800902504 /* SpeakerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetailsVC.h; sourceTree = "<group>"; };
 		3005B6361995741800902504 /* SpeakerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetailsVC.m; sourceTree = "<group>"; };
 		3005B63819957CC100902504 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3005B63A1995E16C00902504 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3006C2E81986E3BD00770AD6 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		3006C2E91986E3BD00770AD6 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		3006C3C519874E6100770AD6 /* ParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3005B63B1995E16C00902504 /* MessageUI.framework in Frameworks */,
 				3005B63919957CC100902504 /* CoreLocation.framework in Frameworks */,
 				3006C41919881FF300770AD6 /* MapKit.framework in Frameworks */,
 				30530F511986C68F00D12C8D /* CoreGraphics.framework in Frameworks */,
@@ -112,8 +115,8 @@
 		3006C2E51986E31C00770AD6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3006C3C919874E6A00770AD6 /* News.m */,
 				3006C3C819874E6A00770AD6 /* News.h */,
+				3006C3C919874E6A00770AD6 /* News.m */,
 				3005B626199533E200902504 /* EventsParseOperation.h */,
 				3005B627199533E200902504 /* EventsParseOperation.m */,
 				3006C3C519874E6100770AD6 /* ParseOperation.h */,
@@ -139,11 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				3006C2E81986E3BD00770AD6 /* HomeVC.h */,
+				3006C2E91986E3BD00770AD6 /* HomeVC.m */,
 				3005B6351995741800902504 /* SpeakerDetailsVC.h */,
 				3005B6361995741800902504 /* SpeakerDetailsVC.m */,
 				3005B63219956ED500902504 /* EventDetailsVC.h */,
 				3005B63319956ED500902504 /* EventDetailsVC.m */,
-				3006C2E91986E3BD00770AD6 /* HomeVC.m */,
 				3006C40C1988089A00770AD6 /* ScheduleVC.h */,
 				3006C40D1988089A00770AD6 /* ScheduleVC.m */,
 			);
@@ -172,6 +175,7 @@
 		30530F4D1986C68F00D12C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3005B63A1995E16C00902504 /* MessageUI.framework */,
 				3005B63819957CC100902504 /* CoreLocation.framework */,
 				3006C41819881FF300770AD6 /* MapKit.framework */,
 				30530F4E1986C68F00D12C8D /* Foundation.framework */,

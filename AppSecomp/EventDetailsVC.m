@@ -8,27 +8,22 @@
 
 #import "EventDetailsVC.h"
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
 #import "Event.h"
 #import "SpeakerDetailsVC.h"
 
-@interface EventDetailsVC () <UIAlertViewDelegate>
+@interface EventDetailsVC () <UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
-
 @property (weak, nonatomic) IBOutlet UIButton *speakerNameButton;
-
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *placeLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
 
 @end
 
 @implementation EventDetailsVC
-
-
-
 
 - (NSString*)getWeekdayString:(NSInteger)weekday{
 	switch (weekday) {
@@ -102,6 +97,21 @@
 	
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Confirmação" message:@"Deseja ser avisado 30 minutos antes do início do evento?" delegate:self cancelButtonTitle:@"Cancelar" otherButtonTitles:@"OK", nil];
 	[alert show];
+}
+- (IBAction)sendEmailWithFeedback:(UIButton *)sender {
+	MFMailComposeViewController *mailComposer;
+	mailComposer = [[MFMailComposeViewController alloc]init];
+	mailComposer.mailComposeDelegate = self;
+	[mailComposer setSubject:[NSString stringWithFormat:@"Feedback - %@ por %@",self.event.name, self.event.speakerName]];
+	[mailComposer setToRecipients:@[@"gbuenoandrade@gmail.com"]];
+	[self presentModalViewController:mailComposer animated:YES];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+		 didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - UIAlertViewDelegate
