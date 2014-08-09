@@ -103,7 +103,7 @@
 	mailComposer = [[MFMailComposeViewController alloc]init];
 	mailComposer.mailComposeDelegate = self;
 	[mailComposer setSubject:[NSString stringWithFormat:@"Feedback Secomp - %@ por %@",self.event.name, self.event.speakerName]];
-	[mailComposer setToRecipients:@[@"gbuenoandrade@gmail.com"]];
+	[mailComposer setToRecipients:@[@"secomp@unicamp.com.br"]];
 	[self presentModalViewController:mailComposer animated:YES];
 }
 
@@ -119,10 +119,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 	if(buttonIndex){
 		UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-//		localNotification.fireDate = [self.event.beginTime dateByAddingTimeInterval:-30*60];
-		
-		localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:5];
-
+		localNotification.fireDate = [self.event.beginTime dateByAddingTimeInterval:-30*60];
 		
 		localNotification.alertBody = [NSString stringWithFormat:@"%@ começa em 30 minutos em %@", self.event.name, self.event.place];
 		localNotification.soundName = UILocalNotificationDefaultSoundName;

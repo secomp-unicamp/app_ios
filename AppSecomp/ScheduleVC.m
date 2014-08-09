@@ -25,7 +25,7 @@
 
 - (NSArray*)events{
 	if(!_events){
-		_events = @[[NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array] ];
+		_events = @[[NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array], [NSMutableArray array]];
 	}
 	return _events;
 }
