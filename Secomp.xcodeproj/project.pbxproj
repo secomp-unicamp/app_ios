@@ -66,19 +66,19 @@
 		3006C40C1988089A00770AD6 /* ScheduleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleVC.h; sourceTree = "<group>"; };
 		3006C40D1988089A00770AD6 /* ScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleVC.m; sourceTree = "<group>"; };
 		3006C41819881FF300770AD6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		30530F4B1986C68F00D12C8D /* AppSecomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSecomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30530F4B1986C68F00D12C8D /* Secomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Secomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30530F4E1986C68F00D12C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30530F501986C68F00D12C8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		30530F521986C68F00D12C8D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		30530F561986C68F00D12C8D /* AppSecomp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppSecomp-Info.plist"; sourceTree = "<group>"; };
+		30530F561986C68F00D12C8D /* Secomp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Secomp-Info.plist"; sourceTree = "<group>"; };
 		30530F581986C68F00D12C8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30530F5A1986C68F00D12C8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		30530F5C1986C68F00D12C8D /* AppSecomp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppSecomp-Prefix.pch"; sourceTree = "<group>"; };
+		30530F5C1986C68F00D12C8D /* Secomp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Secomp-Prefix.pch"; sourceTree = "<group>"; };
 		30530F5D1986C68F00D12C8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		30530F5E1986C68F00D12C8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		30530F611986C68F00D12C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30530F661986C68F00D12C8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		30530F6C1986C68F00D12C8D /* AppSecompTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppSecompTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30530F6C1986C68F00D12C8D /* SecompTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecompTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30530F6D1986C68F00D12C8D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		30530F751986C68F00D12C8D /* AppSecompTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppSecompTests-Info.plist"; sourceTree = "<group>"; };
 		30530F771986C68F00D12C8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 		30530F4C1986C68F00D12C8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30530F4B1986C68F00D12C8D /* AppSecomp.app */,
-				30530F6C1986C68F00D12C8D /* AppSecompTests.xctest */,
+				30530F4B1986C68F00D12C8D /* Secomp.app */,
+				30530F6C1986C68F00D12C8D /* SecompTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,10 +202,10 @@
 			children = (
 				30530F5D1986C68F00D12C8D /* AppDelegate.h */,
 				30530F5E1986C68F00D12C8D /* AppDelegate.m */,
-				30530F561986C68F00D12C8D /* AppSecomp-Info.plist */,
+				30530F561986C68F00D12C8D /* Secomp-Info.plist */,
 				30530F571986C68F00D12C8D /* InfoPlist.strings */,
 				30530F5A1986C68F00D12C8D /* main.m */,
-				30530F5C1986C68F00D12C8D /* AppSecomp-Prefix.pch */,
+				30530F5C1986C68F00D12C8D /* Secomp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -231,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30530F4A1986C68F00D12C8D /* AppSecomp */ = {
+		30530F4A1986C68F00D12C8D /* Secomp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30530F7D1986C68F00D12C8D /* Build configuration list for PBXNativeTarget "AppSecomp" */;
+			buildConfigurationList = 30530F7D1986C68F00D12C8D /* Build configuration list for PBXNativeTarget "Secomp" */;
 			buildPhases = (
 				30530F471986C68F00D12C8D /* Sources */,
 				30530F481986C68F00D12C8D /* Frameworks */,
@@ -243,14 +243,14 @@
 			);
 			dependencies = (
 			);
-			name = AppSecomp;
+			name = Secomp;
 			productName = AppSecomp;
-			productReference = 30530F4B1986C68F00D12C8D /* AppSecomp.app */;
+			productReference = 30530F4B1986C68F00D12C8D /* Secomp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		30530F6B1986C68F00D12C8D /* AppSecompTests */ = {
+		30530F6B1986C68F00D12C8D /* SecompTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30530F801986C68F00D12C8D /* Build configuration list for PBXNativeTarget "AppSecompTests" */;
+			buildConfigurationList = 30530F801986C68F00D12C8D /* Build configuration list for PBXNativeTarget "SecompTests" */;
 			buildPhases = (
 				30530F681986C68F00D12C8D /* Sources */,
 				30530F691986C68F00D12C8D /* Frameworks */,
@@ -261,9 +261,9 @@
 			dependencies = (
 				30530F721986C68F00D12C8D /* PBXTargetDependency */,
 			);
-			name = AppSecompTests;
+			name = SecompTests;
 			productName = AppSecompTests;
-			productReference = 30530F6C1986C68F00D12C8D /* AppSecompTests.xctest */;
+			productReference = 30530F6C1986C68F00D12C8D /* SecompTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -283,7 +283,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 30530F461986C68E00D12C8D /* Build configuration list for PBXProject "AppSecomp" */;
+			buildConfigurationList = 30530F461986C68E00D12C8D /* Build configuration list for PBXProject "Secomp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -296,8 +296,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30530F4A1986C68F00D12C8D /* AppSecomp */,
-				30530F6B1986C68F00D12C8D /* AppSecompTests */,
+				30530F4A1986C68F00D12C8D /* Secomp */,
+				30530F6B1986C68F00D12C8D /* SecompTests */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +355,7 @@
 /* Begin PBXTargetDependency section */
 		30530F721986C68F00D12C8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 30530F4A1986C68F00D12C8D /* AppSecomp */;
+			target = 30530F4A1986C68F00D12C8D /* Secomp */;
 			targetProxy = 30530F711986C68F00D12C8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -465,9 +465,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppSecomp/AppSecomp-Prefix.pch";
-				INFOPLIST_FILE = "AppSecomp/AppSecomp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AppSecomp/Secomp-Prefix.pch";
+				INFOPLIST_FILE = "AppSecomp/Secomp-Info.plist";
+				PRODUCT_NAME = Secomp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -479,9 +479,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AppSecomp/AppSecomp-Prefix.pch";
-				INFOPLIST_FILE = "AppSecomp/AppSecomp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "AppSecomp/Secomp-Prefix.pch";
+				INFOPLIST_FILE = "AppSecomp/Secomp-Info.plist";
+				PRODUCT_NAME = Secomp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -502,7 +502,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AppSecompTests/AppSecompTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SecompTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -520,7 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppSecomp/AppSecomp-Prefix.pch";
 				INFOPLIST_FILE = "AppSecompTests/AppSecompTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SecompTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -529,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30530F461986C68E00D12C8D /* Build configuration list for PBXProject "AppSecomp" */ = {
+		30530F461986C68E00D12C8D /* Build configuration list for PBXProject "Secomp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30530F7B1986C68F00D12C8D /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30530F7D1986C68F00D12C8D /* Build configuration list for PBXNativeTarget "AppSecomp" */ = {
+		30530F7D1986C68F00D12C8D /* Build configuration list for PBXNativeTarget "Secomp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30530F7E1986C68F00D12C8D /* Debug */,
@@ -547,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30530F801986C68F00D12C8D /* Build configuration list for PBXNativeTarget "AppSecompTests" */ = {
+		30530F801986C68F00D12C8D /* Build configuration list for PBXNativeTarget "SecompTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30530F811986C68F00D12C8D /* Debug */,

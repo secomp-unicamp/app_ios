@@ -111,21 +111,33 @@
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 	switch (section) {
 		case 0:
-			return @"Segunda - 11";
+			return @"SEGUNDA - 11";
 		case 1:
-			return @"Terça - 12";
+			return @"TERÇA - 12";
 		case 2:
-			return @"Quarta - 13";
+			return @"QUARTA - 13";
 		case 3:
-			return @"Quinta - 14";
+			return @"QUINTA - 14";
 		case 4:
-			return @"Sexta - 15";
+			return @"SEXTA - 15";
 		case 5:
-			return @"Sábado - 16";
+			return @"SÁBADO - 16";
 		default:
 			return @"";
 	}
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    if([view isKindOfClass:[UITableViewHeaderFooterView class]]){
+		
+        UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *) view;
+        tableViewHeaderFooterView.textLabel.textColor = [UIColor orangeColor];
+		tableViewHeaderFooterView.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:17.0];
+    }
+}
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 	if([segue.identifier isEqualToString:@"goToEventDetails"]){

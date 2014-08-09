@@ -10,12 +10,11 @@
 #import "ParseOperation.h"
 #import "News.h"
 
-@interface HomeVC ()
+@interface HomeVC () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *newsFeedsList;
 @property (strong, nonatomic) NSOperationQueue *parseQueue;
-
 @end
 
 @implementation HomeVC
@@ -51,11 +50,16 @@
 	
 }
 
+
 - (void)updateTableView{
 	
 	
 	[self.tableView reloadData];
 }
+
+
+
+
 
 #pragma mark - UITableViewDataSourceProtocol
 
@@ -82,5 +86,9 @@
 	return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	NSURL *url =[NSURL URLWithString: ((News*)self.newsFeedsList[indexPath.row]).link];
+	[[UIApplication sharedApplication] openURL:url];
+}
 
 @end

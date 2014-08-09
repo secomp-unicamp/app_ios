@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-	self.nameLabel.text = self.name;
+	self.nameLabel.text = [self.name uppercaseString];
 	self.professionTextView.text = self.profession;
 	self.bioTextView.text = self.biograph;
 	self.imageView.image = self.image;

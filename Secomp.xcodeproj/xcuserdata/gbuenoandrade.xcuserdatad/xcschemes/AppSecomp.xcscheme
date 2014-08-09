@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30530F4A1986C68F00D12C8D"
-               BuildableName = "AppSecomp.app"
-               BlueprintName = "AppSecomp"
-               ReferencedContainer = "container:AppSecomp.xcodeproj">
+               BuildableName = "Secomp.app"
+               BlueprintName = "Secomp"
+               ReferencedContainer = "container:Secomp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "30530F6B1986C68F00D12C8D"
-               BuildableName = "AppSecompTests.xctest"
-               BlueprintName = "AppSecompTests"
-               ReferencedContainer = "container:AppSecomp.xcodeproj">
+               BuildableName = "SecompTests.xctest"
+               BlueprintName = "SecompTests"
+               ReferencedContainer = "container:Secomp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30530F4A1986C68F00D12C8D"
-            BuildableName = "AppSecomp.app"
-            BlueprintName = "AppSecomp"
-            ReferencedContainer = "container:AppSecomp.xcodeproj">
+            BuildableName = "Secomp.app"
+            BlueprintName = "Secomp"
+            ReferencedContainer = "container:Secomp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30530F4A1986C68F00D12C8D"
-            BuildableName = "AppSecomp.app"
-            BlueprintName = "AppSecomp"
-            ReferencedContainer = "container:AppSecomp.xcodeproj">
+            BuildableName = "Secomp.app"
+            BlueprintName = "Secomp"
+            ReferencedContainer = "container:Secomp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "30530F4A1986C68F00D12C8D"
-            BuildableName = "AppSecomp.app"
-            BlueprintName = "AppSecomp"
-            ReferencedContainer = "container:AppSecomp.xcodeproj">
+            BuildableName = "Secomp.app"
+            BlueprintName = "Secomp"
+            ReferencedContainer = "container:Secomp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

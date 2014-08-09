@@ -14,7 +14,7 @@
 
 @interface EventDetailsVC () <UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIButton *speakerNameButton;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -28,19 +28,19 @@
 - (NSString*)getWeekdayString:(NSInteger)weekday{
 	switch (weekday) {
 		case 1:
-			return @"Domingo";
+			return @"Dom";
 		case 2:
-			return @"Segunda";
+			return @"Seg";
 		case 3:
-			return @"Terça";
+			return @"Ter";
 		case 4:
-			return @"Quarta";
+			return @"Qua";
 		case 5:
-			return @"Quinta";
+			return @"Qui";
 		case 6:
-			return @"Sexta";
+			return @"Sex";
 		case 7:
-			return @"Sábado";
+			return @"Sab";
 		default:
 			return @"";
 	}
@@ -54,7 +54,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.titleLabel.text = [NSString stringWithFormat:@"%@: %@",self.event.type, self.event.name];
+	self.titleLabel.text = [[NSString stringWithFormat:@"%@: %@",self.event.type, self.event.name] uppercaseString];
 	self.descriptionTextView.text = self.event.description;
 	self.placeLabel.text = self.event.place;
 	[self.speakerNameButton setTitle:self.event.speakerName forState:UIControlStateNormal];
@@ -63,7 +63,7 @@
 	NSDateComponents *beginTimeComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitHour|NSCalendarUnitMinute | NSCalendarUnitWeekday fromDate:self.event.beginTime];
 	NSDateComponents *endTimeComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitHour|NSCalendarUnitMinute fromDate:self.event.endTime];
 	
-	self.dateLabel.text = [NSString stringWithFormat:@"%@ %@:%@ - %@:%@",[self getWeekdayString:beginTimeComponents.weekday], [self getNumberWithLeftZero:beginTimeComponents.hour], [self getNumberWithLeftZero:beginTimeComponents.minute], [self getNumberWithLeftZero:endTimeComponents.hour], [self getNumberWithLeftZero:endTimeComponents.minute] ];
+	self.dateLabel.text = [NSString stringWithFormat:@"%@, %@:%@-%@:%@",[self getWeekdayString:beginTimeComponents.weekday], [self getNumberWithLeftZero:beginTimeComponents.hour], [self getNumberWithLeftZero:beginTimeComponents.minute], [self getNumberWithLeftZero:endTimeComponents.hour], [self getNumberWithLeftZero:endTimeComponents.minute] ];
 	
 	
 	self.mapView.showsUserLocation = YES;
@@ -102,7 +102,7 @@
 	MFMailComposeViewController *mailComposer;
 	mailComposer = [[MFMailComposeViewController alloc]init];
 	mailComposer.mailComposeDelegate = self;
-	[mailComposer setSubject:[NSString stringWithFormat:@"Feedback - %@ por %@",self.event.name, self.event.speakerName]];
+	[mailComposer setSubject:[NSString stringWithFormat:@"Feedback Secomp - %@ por %@",self.event.name, self.event.speakerName]];
 	[mailComposer setToRecipients:@[@"gbuenoandrade@gmail.com"]];
 	[self presentModalViewController:mailComposer animated:YES];
 }
