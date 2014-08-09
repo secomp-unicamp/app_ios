@@ -11,22 +11,38 @@
 @implementation AppDelegate
 
 - (void)initAparence{
-
-    
 	[[UITabBar appearance] setTintColor:[UIColor orangeColor]];
+}
+
+-(void)initializeStoryBoardBasedOnScreenSize {
 	
-	
-//    // Set appearance info
-//    [[UITabBar appearance] setBarTintColor:byteClubBlue];
-//    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackOpaque];
-//    [[UINavigationBar appearance] setBarTintColor:byteClubBlue];
-//    
-//    [[UIToolbar appearance] setBarStyle:UIBarStyleBlackOpaque];
-//    [[UIToolbar appearance] setBarTintColor:byteClubBlue];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
+		
+		CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
+		UIStoryboard *storyboard;
+		
+		if (iOSDeviceScreenSize.height == 480)
+			storyboard = [UIStoryboard storyboardWithName:@"iPhone4-" bundle:nil];
+		else if (iOSDeviceScreenSize.height == 568)
+			storyboard = [UIStoryboard storyboardWithName:@"iPhone5+" bundle:nil];
+		
+		// Instantiate the initial view controller object from the storyboard
+		UIViewController *initialViewController = [storyboard instantiateInitialViewController];
+		
+		// Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+		self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+		
+		// Set the initial view controller to be the root view controller of the window object
+		self.window.rootViewController  = initialViewController;
+		
+		// Set the window object to be the key window and show it
+		[self.window makeKeyAndVisible];
+	}
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[self initializeStoryBoardBasedOnScreenSize];
 	[self initAparence];
     return YES;
 }
